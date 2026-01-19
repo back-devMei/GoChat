@@ -1,5 +1,5 @@
 [mainConfig]
-appName = "kama_chat_server"
+appName = "go_chat_server"
 host = "0.0.0.0"
 port = 8000
 
@@ -8,7 +8,7 @@ host = "127.0.0.1"
 port = 3306
 user = "root"
 password = "" # 云服务器始终保证root状态，所以默认没有密码
-databaseName = "kama_chat_server"
+databaseName = "go_chat_server"
 
 [redisConfig]
 host = "127.0.0.1"
