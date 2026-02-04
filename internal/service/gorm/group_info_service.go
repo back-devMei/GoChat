@@ -27,47 +27,6 @@ type groupInfoService struct {
 
 var GroupInfoService = new(groupInfoService)
 
-// SaveGroup 保存群聊
-//func (g *groupInfoService) SaveGroup(groupReq request.SaveGroupRequest) error {
-//	var group model.GroupInfo
-//	res := dao.GormDB.First(&group, "uuid = ?", groupReq.Uuid)
-//	if res.Error != nil {
-//		if errors.Is(res.Error, gorm.ErrRecordNotFound) {
-//			// 创建群聊
-//			group.Uuid = groupReq.Uuid
-//			group.Name = groupReq.Name
-//			group.Notice = groupReq.Notice
-//			group.AddMode = groupReq.AddMode
-//			group.Avatar = groupReq.Avatar
-//			group.MemberCnt = 1
-//			group.Members = append(group.Members, groupReq.OwnerId)
-//			group.OwnerId = groupReq.OwnerId
-//			group.CreatedAt = time.Now()
-//			group.UpdatedAt = time.Now()
-//			if res := dao.GormDB.Create(&group); res.Error != nil {
-//				zlog.Error(res.Error.Error())
-//				return res.Error
-//			}
-//			return nil
-//		} else {
-//			zlog.Error(res.Error.Error())
-//			return res.Error
-//		}
-//	}
-//	// 更新群聊
-//	group.Uuid = groupReq.Uuid
-//	group.Name = groupReq.Name
-//	group.Notice = groupReq.Notice
-//	group.AddMode = groupReq.AddMode
-//	group.Avatar = groupReq.Avatar
-//	group.MemberCnt = 1
-//	group.Members = append(group.Members, groupReq.OwnerId)
-//	group.OwnerId = groupReq.OwnerId
-//	group.CreatedAt = time.Now()
-//	group.UpdatedAt = time.Now()
-//	return nil
-//}
-
 // CreateGroup 创建群聊
 // 创建一个新的群聊，包含群信息初始化和群主加入群聊的联系人记录
 // 参数: groupReq - 包含群聊创建所需信息的请求对象
